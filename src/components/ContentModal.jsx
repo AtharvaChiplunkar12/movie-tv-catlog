@@ -5,10 +5,10 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Search from "./Search";
-import { makeStyles } from "@mui/material";
 import "./ContentModal.css"
+import styled from "styled-components";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = styled((theme) => ({
 	modal: {
 		display: "flex",
 		alignItems: "center",
