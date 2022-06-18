@@ -6,7 +6,7 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Search from "./Search";
 import "./ContentModal.css"
-import styled from "styled-components";
+import { styled } from "@mui/system";
 
 const useStyles = styled((theme) => ({
 	modal: {
