@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Search from "./Search";
-import "./ContentModal.css"
+import "./ContentModal.css";
 import { styled } from "@mui/system";
 
 const useStyles = styled((theme) => ({
@@ -39,7 +39,7 @@ export default function ContentModal({ children }) {
 				aria-labelledby='transition-modal-title'
 				aria-describedby='transition-modal-description'
 				open={open}
-        className={classes.modal}
+				className={classes.modal}
 				onClose={handleClose}
 				closeAfterTransition
 				BackdropComponent={Backdrop}
