@@ -1,0 +1,13 @@
+.ContentModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+  .ContentModal::-webkit-scrollbar {
+    display: none;
+  }

@@ -1,0 +1,54 @@
+.content{
+    margin-top: 500px;
+    color: whitesmoke;
+    background-color: blue;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    height: 100%;
+}
+
+.background_image{
+    height: 800px;
+    background-position: 50% 25%;
+    background-size: cover;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    max-height: 600px;
+    z-index: -1;
+}
+
+@media (max-width:700px) {
+    .background_image{
+        height : 450px;
+    }
+}
+
+@media (max-width:500px) {
+    .background_image{
+        height : 300px;
+    }
+}
+
+.recommender{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.poster_and_info{
+    display: flex;
+}
+
+.poster{
+    height: 400px;
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+.poster_and_button{
+    padding: 10px;
+}

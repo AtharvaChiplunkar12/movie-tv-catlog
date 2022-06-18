@@ -1,0 +1,49 @@
+.title {
+    font-style: italic;
+    text-align: center;
+    font-size: 17px;
+    color: yellow;
+    width: 100%;
+    padding: 8px 0;
+}
+
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #202020;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.grid:hover{
+    background-color: blue;
+}
+
+@media (max-width: 500px) {
+    .grid{
+        width: 46%;
+    }
+    
+}
+
+.poster img{
+    width: 180px;
+    margin: 5px;
+    border-radius: 10px;   
+}
+
+.media_type{
+    text-transform: capitalize;
+    padding-right: 100px;
+    padding-left: 10px;
+}
+
+.type_date{
+    display: flex;
+    color: aqua;
+}

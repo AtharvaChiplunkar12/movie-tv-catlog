@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./Header";
+import HomePage from "./HomePage";
+import { Route, Routes } from "react-router-dom";
+import Movies from "./Movies";
+import TvShow from "./TvShow";
+import Anime from "./Anime";
+import Page from "./Page";
+import { Container } from "@mui/material";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Header />
+			<div className='app'>
+				<Routes>
+					<Route path='/HomePage' element={<HomePage />} />
+					<Route path='/Movies' element={<Movies />} />
+					<Route path='/TvShow' element={<TvShow />} />
+					<Route path='/Anime' element={<Anime />} />
+					<Route path='/Page' element={<Page />} />
+				</Routes>
+			</div>
+		</>
+	);
 }
 
 export default App;
