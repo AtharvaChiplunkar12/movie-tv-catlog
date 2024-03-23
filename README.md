@@ -19,11 +19,11 @@ Flick List is a full-stack application developed using React, REST API, Material
 
 
 ## Project Features
-![infoPage](images/infoPage.png)
+![Alt text](images/mainPage.png)
 
 ![mainList](images/mainList.png)
 
-![Alt text](images/mainPage.png)
+![infoPage](images/infoPage.png)
 
 ![Alt text](images/recommendation.png)
 
