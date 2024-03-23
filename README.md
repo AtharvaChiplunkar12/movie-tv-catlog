@@ -1,7 +1,7 @@
 # Flick List (Movie & TV app)
 
 ## Description
-Flick List is a full stack application developed using React, REST API, Material-UI (MUI), and CSS. It provides users with access to a catalog of over 9000 movies and TV shows, along with profiles of over 6000 cast and crew members.
+Flick List is a full-stack application developed using React, REST API, Material-UI (MUI), and CSS. It provides users with access to a catalog of over 9000 movies and TV shows, along with profiles of over 6000 cast and crew members.
 
 ## Key Features
 - Developed a full stack application, providing access to a catalog of over 9000 movies and TV shows, along with profiles of over 6000 cast and crew members.
@@ -19,25 +19,12 @@ Flick List is a full stack application developed using React, REST API, Material
 
 
 ## Project Features
+[Carousel](https://drive.google.com/file/d/1fjLC8_ar_ej-OwcVweSJI4Po3zpzNXVG/view?usp=drive_link)
 
-<video width="640" height="360" controls>
-  <source src="videos/carosel.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+[Modules](https://drive.google.com/file/d/1Kma79QngzjMiES21Xv4BbnoRp53rYNKs/view?usp=drive_link)
 
-<video width="640" height="360" controls>
-  <source src="videos/movie-tvshows.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+[Pagination](https://drive.google.com/file/d/1BWQAMaGZoN-3dVtpFp5L9v_csbUTMMLx/view?usp=drive_link)
 
-<video width="640" height="360" controls>
-  <source src="videos/Page-change.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
-
-<video width="640" height="360" controls>
-  <source src="videos/page.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+[Information Page](https://drive.google.com/file/d/1qPHjL9w2SKnhlu2X36fyd-vo3VPAesjj/view?usp=drive_link)
 
 
