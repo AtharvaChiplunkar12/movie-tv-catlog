@@ -1,0 +1,21 @@
+.carouselItem {
+	display: flex;
+	flex-direction: column;
+	object-fit: contain;
+	padding: 10px;
+}
+
+.cast_image {
+	border-radius: 10px;
+	margin-bottom: 5px;
+	box-shadow: 0px 0px 5px black;
+}
+.alice-carousel__prev-btn-item {
+	color: black;
+	font-size: xxx-large;
+}
+
+.alice-carousel__next-btn-item {
+	color: black;
+	font-size: xxx-large;
+}
