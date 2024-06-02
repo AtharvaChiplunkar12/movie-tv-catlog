@@ -2,14 +2,20 @@ import React, { useEffect, useState } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { fetchGenresData } from './components/api';
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { fetchGenresData, fetchLLMmodel } from './components/api';
+import { Button, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 
 function ChatBot () {
     const [genres, setGenres] = useState([]);
     const [selectedGenres, setSelectedGenres] = useState([]);
     const [type, setType] = useState("");
+    const [genreString, setGenreString] = useState("");
+    const [responseData, setResponseData] = useState();
+
+    const setPromptString = () => {
+        setGenreString(selectedGenres.join());
+    }
 
     const handleCheckboxChange = (event, name) => {
         const { checked } = event.target;
@@ -30,6 +36,15 @@ function ChatBot () {
 		setGenres(data.genres);
 	};
 
+    const fetchLLM = async () => {
+        if (genreString != ""){
+            console.log(genreString);
+            const result = await fetchLLMmodel(genreString);
+            console.log(result);
+            setResponseData(result);
+        }
+    }
+
     useEffect(() => {
 		fetchGenres();
 		return () => {
@@ -38,12 +53,17 @@ function ChatBot () {
 	}, []);
 
     useEffect(() => {
+        fetchLLM();
+      }, [genreString]);
+
+    useEffect(() => {
         console.log('Selected Genres:', selectedGenres);
       }, [selectedGenres]);
 
       useEffect(() => {
         fetchGenres(type);
         setSelectedGenres([]);
+        setResponseData();
       }, [type]);
 
   return (
@@ -70,13 +90,19 @@ function ChatBot () {
                 label={genre.name} 
                 />
                 
-            ))}
+        ))}
         </FormGroup>
 )}
     </div>
-    <div>
-
-    </div>
+        <Button
+            onClick={setPromptString}
+            variant='contained'>
+            GO
+        </Button>
+    {responseData &&
+    (<div>
+         {responseData}
+    </div>)}
 </div>
   )
 }

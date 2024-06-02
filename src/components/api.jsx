@@ -33,7 +33,19 @@ export const fetchGenresData = async (type) => {
     );
       return response.data;
     } catch (error) {
-      console.error("Error fetching tv shows data", error);
+      console.error("Error fetching Genres data", error);
+      throw error;
+    }
+};
+
+export const fetchLLMmodel = async (genre) => {
+    try {
+      const response = await axios.get(
+        `http://127.0.0.1:8000/${genre}/Hindi`,
+    );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching LLM Model", error);
       throw error;
     }
 };

@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain.chains import LLMChain, SimpleSequentialChain, SequentialChain
 from langchain.prompts import PromptTemplate
+from fastapi.middleware.cors import CORSMiddleware
 #from dotenv import load_dotenv
 from key import huggingface_access_key
 import os
@@ -18,6 +19,14 @@ llm = HuggingFaceEndpoint(
 )
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 @app.get("/{genre}/{language}")
 def read_root(genre, language):
