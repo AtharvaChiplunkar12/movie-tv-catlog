@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { Chip } from "@mui/material";
+import { fetchGenresData } from "./api";
 
 function Genres({
 	genres,
@@ -25,10 +26,7 @@ function Genres({
 	};
 
 	const fetchGenres = async () => {
-		const { data } = await axios.get(
-			`https://api.themoviedb.org/3/genre/${type}/list?api_key=3b36cd2b0c4e8c4a3ec6742e7d6bf81f&language=en-US`,
-		);
-
+		const data = await fetchGenresData(type);
 		setGenres(data.genres);
 	};
 
@@ -56,10 +54,13 @@ function Genres({
 			{genres &&
 				genres.map((genre) => (
 					<Chip
+						color='primary'
+						variant='outlined'
 						label={genre.name}
 						style={{ margin: 2 }}
 						size='small'
 						key={genre.id}
+
 						clickable
 						onClick={() => handleAdd(genre)}
 					/>

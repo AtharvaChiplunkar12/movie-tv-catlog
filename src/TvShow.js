@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./TvShow.css";
-import axios from "axios";
 import Grid from "./components/Grid";
 import CustomPagination from "./components/CustomPagination";
 import useGenres from "./components/useGenres";
 import Genres from "./components/Genres";
+import { fetchTvShowsData } from './components//api';
 
 function TvShow() {
 	const [content, setContent] = useState([]);
@@ -16,9 +16,7 @@ function TvShow() {
 	const genreforURL = useGenres(selectedGenres);
 
 	const fetchTvShows = async () => {
-		const { data } = await axios.get(
-			`https://api.themoviedb.org/3/discover/tv?api_key=3b36cd2b0c4e8c4a3ec6742e7d6bf81f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&page=${page}&with_genres=${genreforURL}`,
-		);
+		const data  = await fetchTvShowsData(page, genreforURL);
 		console.log(data.results);
 		setContent(data.results);
 		setNumOfPages(data.total_pages);

@@ -7,13 +7,11 @@ import Grid from "./components/Grid";
 import CastSlider from "./components/CastSlider";
 import { Button } from "@mui/material";
 import { YouTube } from "@mui/icons-material";
-import AliceCarousel from "react-alice-carousel";
 
 function Page() {
 	const location = useLocation();
 	const poster = location.state.poster;
 	const background_image = location.state.background_image;
-	const genre_ids = location.state.genre_ids;
 	const media_type = location.state.media_type;
 	const id = location.state.id;
 	const [content, setContent] = useState([]);
@@ -120,6 +118,4 @@ function Page() {
 }
 
 export default Page;
-/*
-				
-				*/
+

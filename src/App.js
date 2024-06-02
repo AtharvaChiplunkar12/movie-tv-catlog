@@ -5,9 +5,8 @@ import HomePage from "./HomePage";
 import { Route, Routes } from "react-router-dom";
 import Movies from "./Movies";
 import TvShow from "./TvShow";
-import Anime from "./Anime";
 import Page from "./Page";
-import { Container } from "@mui/material";
+import ChatBot from "./ChatBot";
 
 function App() {
 	return (
@@ -18,7 +17,7 @@ function App() {
 					<Route path='/HomePage' element={<HomePage />} />
 					<Route path='/Movies' element={<Movies />} />
 					<Route path='/TvShow' element={<TvShow />} />
-					<Route path='/Anime' element={<Anime />} />
+					<Route path='/ChatBot' element={<ChatBot />} />
 					<Route path='/Page' element={<Page />} />
 				</Routes>
 			</div>

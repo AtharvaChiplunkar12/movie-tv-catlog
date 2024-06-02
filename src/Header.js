@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import ContentModal from "./components/ContentModal";
-import { Button, TextField, ThemeProvider } from "@mui/material";
+import { Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Header() {
@@ -43,7 +43,7 @@ function Header() {
 		if (val === 0) navigate("/HomePage");
 		else if (val === 1) navigate("/Movies");
 		else if (val === 2) navigate("/TvShow");
-		else if (val === 3) navigate("/Anime");
+		else if (val === 3) navigate("/ChatBot");
 	};
 
 	function LinkTab(props) {
@@ -81,7 +81,7 @@ function Header() {
 						<LinkTab label='Home' onClick={() => handleTabChange(0)} />
 						<LinkTab label='Movies' onClick={() => handleTabChange(1)} />
 						<LinkTab label='TV Show' onClick={() => handleTabChange(2)} />
-						<LinkTab label='Anime' onClick={() => handleTabChange(3)} />
+						<LinkTab label='ChatBot' onClick={() => handleTabChange(3)} />
 					</Tabs>
 				</Box>
 			</div>
