@@ -25,7 +25,7 @@ function HomePage() {
 	return (
 		<div className='home_page'>
 			<div className='search_bar'>
-				<p>Find Movies, TV shows and more</p>
+				
 			</div>
 			<div className='page_title'>Trending</div>
 			<div className='image_slider'>

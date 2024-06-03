@@ -8,8 +8,9 @@ from key import huggingface_access_key
 import os
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = huggingface_access_key
 
-#load_dotenv()
-#huggingface_access_key = os.getenv("HUGGINGFACE_ACCESS_KEY")
+
+# load_dotenv()
+# huggingface_access_key = os.getenv("HUGGINGFACE_ACCESS_KEY")
 
 repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
 

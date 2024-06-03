@@ -4,7 +4,7 @@ import Genres from "./components/Genres";
 import Grid from "./components/Grid";
 import CustomPagination from "./components/CustomPagination";
 import useGenres from "./components/useGenres";
-import { fetchMoviesData } from './components//api';
+import { fetchMoviesData } from './components/api';
 
 
 function Movies() {
