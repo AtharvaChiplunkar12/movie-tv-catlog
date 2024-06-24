@@ -44,6 +44,7 @@ function Header() {
 		else if (val === 1) navigate("/Movies");
 		else if (val === 2) navigate("/TvShow");
 		else if (val === 3) navigate("/ChatBot");
+		else if (val === 4) navigate("/ChatBotTest");
 	};
 
 	function LinkTab(props) {
@@ -82,6 +83,7 @@ function Header() {
 						<LinkTab label='Movies' onClick={() => handleTabChange(1)} />
 						<LinkTab label='TV Show' onClick={() => handleTabChange(2)} />
 						<LinkTab label='ChatBot' onClick={() => handleTabChange(3)} />
+						<LinkTab label='ChatBotTest' onClick={() => handleTabChange(4)} />
 					</Tabs>
 				</Box>
 			</div>

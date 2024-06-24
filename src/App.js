@@ -7,6 +7,7 @@ import Movies from "./Movies";
 import TvShow from "./TvShow";
 import Page from "./Page";
 import ChatBot from "./ChatBot";
+import ChatBotTest from "./ChatBotTest";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route path='/Movies' element={<Movies />} />
 					<Route path='/TvShow' element={<TvShow />} />
 					<Route path='/ChatBot' element={<ChatBot />} />
+					<Route path='/ChatBotTest' element={<ChatBotTest />} />
 					<Route path='/Page' element={<Page />} />
 				</Routes>
 			</div>

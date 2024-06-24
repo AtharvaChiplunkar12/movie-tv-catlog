@@ -20,16 +20,13 @@ function Movies() {
 		const data = await fetchMoviesData(page, genreforURL);
 		setContent(data.results);
 		setNumOfPages(data.total_pages);
-		console.log(data.results);
 	};
 
-	console.log(genres);
 
 	useEffect(() => {
 		fetchMovies();
 	}, [page, genreforURL]);
 
-	console.log(selectedGenres);
 
 	return (
 		<div className='movies_page'>
